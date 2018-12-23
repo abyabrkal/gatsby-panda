@@ -115,3 +115,17 @@ Get the percentage of `people` who are no longer alive.
 ```sql
 select COUNT(deathdate) * 100.0 / COUNT(*) AS percentage_dead from people;
 ```
+___
+___
+
+   ### GROUP BY - 
+   Aggregates rows that share common criteria (e.g. a column value) and will return all of the unique entries found for such criteria.
+
+   ### COUNT -
+   A SQL function will count and return the number of rows that share common criteria.
+
+   ### AS -
+   Creates an alias of a table or column.
+   
+   ### ORDER BY /DESC -
+   Sorts the returned data from a query in ascending or descending order based on a specified criteria or column value.
