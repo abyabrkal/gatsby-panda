@@ -19,13 +19,11 @@ SELECT * FROM films LIMIT 3;
 ```
 
 Getting the language represented in films without repeats
-
 ```sql
 SELECT DISTINCT language FROM films;
 ```
 
 Count the number of rows 
-
 ```sql
 SELECT COUNT(*) FROM films;
 
@@ -46,14 +44,14 @@ SELECT COUNT(title) FROM people;
 - `>=` greater than or equal to
 
 Select all from films for all movies released after 1980 (not including 1980)
-
 ```sql
 SELECT * FROM films WHERE release_year > 1980;
 
 SELECT title FROM films WHERE title = 'Metropolis';
 ```
 
-#### WHERE AND OR
+#### WHERE AND-OR-NOT
+
 ```sql
 SELECT title FROM films WHERE release_year > 1994 AND release_year < 2000;
 
@@ -63,12 +61,16 @@ AND (certification = 'PG' OR certification = 'R');
 ```
 
 #### BETWEEN (and it's inclusive)
+WHERE BETWEEN returns values that fall within a given range.
+
 ```sql
 SELECT title FROM films
 WHERE release_year BETWEEN 1994 AND 2000; 
 ```
 
 #### MULTIPLE OR conditions with WHERE IN
+WHERE IN returns values that matches values in a list or subquery (Shorthand for multiple OR conditions).
+
 ```sql
 SELECT title FROM films
 WHERE release_year IN (2000, 2005, 2010, 2015, 2020);
@@ -76,62 +78,19 @@ WHERE release_year IN (2000, 2005, 2010, 2015, 2020);
 SELECT title FROM films WHERE certification IS NULL;
 ```
 
-#### LIKE / NOT LIKE
-`LIKE` operator can be used in a `WHERE` clause to search for a pattern in a column. To accomplish this, you use something called a *wildcard*(%) as a placeholder for some other values.
+#### LIKE (% and _)
+`LIKE` operator can be used in a `WHERE` clause to search for a pattern in a column. It supports two wildcard match options: % and _
 
 ```sql
 SELECT title FROM films WHERE title LIKE 'Data%';
 ```
 
+#### SELECT DISTINCT
+Returns only distinct (different) values and eliminates duplicate records from the results
 
-<<<<<<< HEAD:src/pages/SQL-Begins.md
+```sql
+SELECT COUNT (DISTINCT country) FROM films;
+```
+
 ### AGGREGATES
 This one needs a separate page for itself. [SQL Page-2: The Aggregated SQL](tthe-Aggregated-SQL.md)
-=======
-## AGGREGATE
----
-
-Aggregate functions to perform some calculation on the data in a database.
-
-#### AVG(), SUM(), MIN(), MAX()
-
-Total budget of movies made in the year 2010 or later
-
-```sql
-SELECT SUM(budget) FROM films
-WHERE release_year >= 2010;
-```
-
-#### ALIASING - AS
-
-```sql
-SELECT MAX(budget) AS max_budget,
-       MAX(duration) AS max_duration
-FROM films;
-```
-
-
-Average duration in hours for all films, aliased as `avg_duration_hours`.
-```sql
-SELECT  avg(duration)/60.0 as avg_duration_hours from films;
-```
-
-Get the percentage of `people` who are no longer alive. 
-```sql
-select COUNT(deathdate) * 100.0 / COUNT(*) AS percentage_dead from people;
-```
-___
-___
-
-   ### GROUP BY - 
-   Aggregates rows that share common criteria (e.g. a column value) and will return all of the unique entries found for such criteria.
-
-   ### COUNT -
-   A SQL function will count and return the number of rows that share common criteria.
-
-   ### AS -
-   Creates an alias of a table or column.
-   
-   ### ORDER BY /DESC -
-   Sorts the returned data from a query in ascending or descending order based on a specified criteria or column value.
->>>>>>> 8b4ee8be80224a55c05f323b846c7b5f8718fb59:src/pages/the-SQL.md
