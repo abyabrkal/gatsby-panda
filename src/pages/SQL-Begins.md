@@ -1,4 +1,5 @@
-# the SQL 
+# SQL Begins 
+### Part 1
 
 Consider the table 'films'
 
@@ -83,6 +84,10 @@ SELECT title FROM films WHERE title LIKE 'Data%';
 ```
 
 
+<<<<<<< HEAD:src/pages/SQL-Begins.md
+### AGGREGATES
+This one needs a separate page for itself. [SQL Page-2: The Aggregated SQL](tthe-Aggregated-SQL.md)
+=======
 ## AGGREGATE
 ---
 
@@ -129,3 +134,4 @@ ___
    
    ### ORDER BY /DESC -
    Sorts the returned data from a query in ascending or descending order based on a specified criteria or column value.
+>>>>>>> 8b4ee8be80224a55c05f323b846c7b5f8718fb59:src/pages/the-SQL.md
