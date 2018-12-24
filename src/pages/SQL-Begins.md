@@ -1,12 +1,11 @@
-
 ---
 title: "SQL Begins"
 date: "2018-12-22"
 ---
-#### Part1
+#### This is Part1
 #### [Part2](the-Aggregated-SQL.md)
 ---
-*Story:* This SQL journey was recorded while taking free [SQL lessons from DataCamp](https://www.datacamp.com/courses/intro-to-sql-for-data-science). So, I use the same tables and data used as a part of the course.
+*Story:* This SQL journey was noted while taking free [SQL lessons from DataCamp](https://www.datacamp.com/courses/intro-to-sql-for-data-science). So, you may see datas familiar from that course and used it for my easy recollection. 
 
 
 
