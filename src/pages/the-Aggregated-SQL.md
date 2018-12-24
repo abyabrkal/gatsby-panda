@@ -1,5 +1,10 @@
-# The Aggregated SQL
-### Part 2
+---
+title: "The Aggregated SQL"
+date: "2018-12-24"
+---
+#### [Part1](SQL-Begins.md)
+#### Part2
+---
 
 ## AGGREGATE
 ---

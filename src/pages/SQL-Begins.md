@@ -1,5 +1,14 @@
-# SQL Begins 
-### Part 1
+
+---
+title: "SQL Begins"
+date: "2018-12-22"
+---
+#### Part1
+#### [Part2](the-Aggregated-SQL.md)
+---
+*Story:* This SQL journey was recorded while taking free [SQL lessons from DataCamp](https://www.datacamp.com/courses/intro-to-sql-for-data-science). So, I use the same tables and data used as a part of the course.
+
+
 
 Consider the table 'films'
 
@@ -93,4 +102,4 @@ SELECT COUNT (DISTINCT country) FROM films;
 ```
 
 ### AGGREGATES
-This one needs a separate page for itself. [SQL Page-2: The Aggregated SQL](tthe-Aggregated-SQL.md)
+This one needs a separate page for itself. [SQL Page-2: The Aggregated SQL](the-Aggregated-SQL.md)
